@@ -1,8 +1,10 @@
-# JavaScript Data Structures and Algorithms
+<h1 id="content">JavaScript Data Structures and Algorithms</h1>
 
 - <a href="#big-o-notation">Big O Notation</a>
+- <a href="#performance-of-arrays-and-objects">Analyzing Performance of Arrays and Objects</a>
 
 <h1 id="big-o-notation">Big O Notation</h1>
+<a href="#content">Back to Top</a>
 
 <a href="https://cs.slides.com/colt_steele/big-o-notation#/2/0/1">Big O Slides</a>
 
@@ -171,6 +173,9 @@ function double(arr) {
     - Certain searching algorithms have logarithmic time complexity.
     - Efficient sorting algorithms involve logarithms.
     - Recursion sometimes involves logarithmic space complexity.
+
+<h1 id="performance-of-arrays-and-objects">Analyzing Performance of Arrays and Objects</h1>
+<a href="#content">Back to Top</a>
 
 
 
