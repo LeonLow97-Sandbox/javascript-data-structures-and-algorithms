@@ -1,9 +1,3 @@
-# JavaScript Data Structures and Algorithms
-
-- <a href="#big-o-notation">Big O Notation</a>
-
-<h1 id="big-o-notation">Big O Notation</h1>
-
 <a href="https://cs.slides.com/colt_steele/big-o-notation#/2/0/1">Big O Slides</a>
 
 ## Time Complexity Examples
@@ -75,7 +69,7 @@ console.log(`Time Elaspsed: ${(t2 - t1) / 1000} seconds.`)
     - f(n) could be constant (f(n) = 1)
     - f(n) could be something entirely different
 
-<img src="./01-big-o-notation/big-o-chart.png" alt="Big O Notation Chart" />
+<img src="./big-o-chart.png" alt="Big O Notation Chart" />
 
 - Big O
     - Method 1: O(n)
@@ -164,16 +158,13 @@ function double(arr) {
 - Inverse of exponential.
 - The logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to 1.
 
-<img src="./01-big-o-notation/how-log-works.png" alt="How Log Works" />
-<img src="./01-big-o-notation/log-example.png" alt="Log Example" />
+<img src="./how-log-works.png" alt="How Log Works" />
+<img src="./log-example.png" alt="Log Example" />
 
 - Using Logarithms
     - Certain searching algorithms have logarithmic time complexity.
     - Efficient sorting algorithms involve logarithms.
     - Recursion sometimes involves logarithmic space complexity.
-
-
-
 
 
 
