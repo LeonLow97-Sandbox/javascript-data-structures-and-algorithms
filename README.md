@@ -2,6 +2,7 @@
 
 - <a href="#big-o-notation">Big O Notation</a>
 - <a href="#performance-of-arrays-and-objects">Analyzing Performance of Arrays and Objects</a>
+- <a href="#problem-solving-approach">Problem Solving Approach</a>
 
 <h1 id="big-o-notation">Big O Notation</h1>
 <a href="#content">Back to Top</a>
@@ -176,6 +177,133 @@ function double(arr) {
 
 <h1 id="performance-of-arrays-and-objects">Analyzing Performance of Arrays and Objects</h1>
 <a href="#content">Back to Top</a>
+
+<a href="https://cs.slides.com/colt_steele/built-in-data-structures-25">Built-in Data Structures Slides</a>
+
+## Objects
+
+- When to use objects?
+    - When you **don't need order**
+    - When you need fast access / insertion and removal.
+
+|Objects|Big O|
+|:-:|:-:|
+|Insertion|O(1)|
+|Removal|O(1)|
+|Searching|O(N)|
+|Access|O(1)|
+
+- Searching has an O(N) time complexity because it has to go through the entire object to look for the `value` that we want.
+
+|Object Methods|Big O|
+|:-:|:-:|
+|`Object.keys`|O(N)|
+|`Object.values`|O(N)|
+|`Object.entries`|O(N)|
+|`hasOwnProperty`|O(1)|
+
+- `hasOwnProperty` has time complexity of O(1) because it only looks for the keys, not values.
+
+## Arrays
+
+- When to use arrays?
+    - When you need **order**
+    - When you need fast access / insertion and removal (sort of ...).
+
+|Arrays|Big O|
+|:-:|:-:|
+|Insertion|Insert at the end - O(1) <br> Insert at the beginning / middle - O(N)|
+|Removal|Removing at the end - O(1) <br> Removing at the beginning / middle - O(N)|
+|Searching|O(N)|
+|Access|O(1)|
+
+|Array Operations|Big O|
+|:-:|:-:|
+|`push`|O(1)|
+|`pop`|O(1)|
+|`shift`|O(N)|
+|`unshift`|O(N)|
+|`concat`|O(N)|
+|`slice`|O(N)|
+|`splice`|O(N)|
+|`sort`|O(N * log N)|
+|`forEach/map/filter/reduce/etc.`|O(N)|
+
+<h1 id="problem-solving-approach">Problem Solving Approach</h1>
+<a href="#content">Back to Top</a>
+
+<a href="https://cs.slides.com/colt_steele/problem-solving-patterns">Problem Solving Approach Slides</a>
+
+## Algorithm
+
+- What is an algorithm?
+    - A process or set of steps to accomplish a certain task.
+    - Almost everything that you do in programning involves some kind of algorithm.
+
+- How do you improve?
+    1. Devise a plan for solving problems
+    2. Master common problem solving patterns
+
+## Problem Solving Strategies
+
+1. Understand the Problem
+1. Explore Concrete Examples
+1. Break It Down
+1. Solve/Simplify
+1. Look Back and Refactor
+
+### Step 1: Understand the problem
+
+- Can I restate the problem in my own words?
+- What are the inputs that go into the problem?
+- What are the outputs that should come from the solution to the problem?
+- Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem? 
+    - You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.
+- How should I label the important pieces of data that are a part of the problem?
+
+### Step 2: Explore Concrete Examples
+
+- Coming up with examples can help you understand the problem better.
+- Examples also provide sanity checks that your eventual solution works how it should.
+- User Stories!
+- Unit Tests!
+
+1. Start with Simple Examples
+1. Progress to more complex examples
+1. Explore Examples with Empty Inputs
+1. Explore Examples with Invalid Inputs
+
+### Step 3: Break It Down
+
+- Explicitly write out the steps you need to take. 
+
+### Step 4: Solve it or simplify
+
+- Find the core difficult in what you are trying to do
+- Temporarily ignroe that difficulty
+- Write a simplied solution
+- Then incorporate that difficulty back in
+
+### Step 5: Look Back and Refactor
+
+- Can you check the result?
+- Can you derive the result differently?
+- Can you understand it at a glance?
+- Can you use the result or method for some other problem?
+    - Mainly time complexity and space complexity
+- Can you improve the performance of your solution?
+- Can you think of other ways to refactor?
+- How have other people solve this problem?
+
+
+
+
+
+
+
+
+
+
 
 
 
