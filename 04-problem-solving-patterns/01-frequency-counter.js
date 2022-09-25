@@ -9,6 +9,9 @@
 
 // O(N^2)
 // indexOf() is another loop
+// The indexOf() method returns the first index at which a given 
+// element can be found in the array, or -1 if it is not present.
+// splice(start, deleteCount, item1, item2, itemN)
 function same(arr1, arr2) {
     if (arr1.length != arr2.length) {
         return false
@@ -48,7 +51,7 @@ function sameRefactored(arr1, arr2) {
             return false
         }
         // Checking if values are similar
-        if (frequencyCounter1[key ** 2] !== frequencyCounter2[key]) {
+        if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
             return false
         }
     }
@@ -60,5 +63,3 @@ function sameRefactored(arr1, arr2) {
 console.log(sameRefactored([1,2,3,2], [9,1,4,4]))
 console.log("\n")
 console.log(sameRefactored([1,2,3,2,5], [9,1,4,4,11]))
-
-

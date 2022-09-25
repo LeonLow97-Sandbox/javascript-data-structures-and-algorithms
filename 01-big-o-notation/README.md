@@ -156,7 +156,7 @@ function double(arr) {
 
 - Sometimes big O expressions involve more complex mathematical expressions.
 - Inverse of exponential.
-- The logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to 1.
+- The logarithm of a number roughly measures the number of times you can **divide that number by 2** before you get a value that's less than or equal to 1.
 
 <img src="./how-log-works.png" alt="How Log Works" />
 <img src="./log-example.png" alt="Log Example" />
