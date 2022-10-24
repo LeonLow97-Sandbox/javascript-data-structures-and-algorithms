@@ -1,9 +1,0 @@
-monkey is jumping along the staircase (fibonacci)
-monkey is jumping on a long staircase
-
-
-budget shopping a school notebook
- a school has provided a teacher with a budget to purchase math notebooks
-
-avoiding landmines
-in 1 move, it moved 1 step to the left
