@@ -55,21 +55,27 @@
 - Outer function (which is not recursive) and calls another inner function that is recursive.
 
 ```js
-    function outer(input) {
-        var outerScopedVariable = []
+function outer(input) {
+  var outerScopedVariable = [];
 
-        function helper(helperInput) {
-            // modify the outerScopedVariable
-            helper(helperInput--)
-        }
+  function helper(helperInput) {
+    // modify the outerScopedVariable
+    helper(helperInput--);
+  }
 
-        helper(input)
+  helper(input);
 
-        return outerScopedVariable
-    }
+  return outerScopedVariable;
+}
 ```
 
 ## Pure Recursion
 
 - Inner function is not needed.
 
+## Making Copies
+
+|                Arrays                |                  Objects                  |              Strings               |
+| :----------------------------------: | :---------------------------------------: | :--------------------------------: |
+|    make copies but do not mutate     | make copies because strings are immutable |       make copies of objects       |
+| `slice`, `spread operator`, `concat` |      `slice`, `substr`, `substring`       | `Object.assign`, `spread operator` |
