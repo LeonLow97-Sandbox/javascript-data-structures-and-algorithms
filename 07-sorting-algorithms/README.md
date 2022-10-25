@@ -50,6 +50,7 @@
 
 - Not very efficient (rarely implemented)
 - A sorting algorithm where the largest values "bubble" up to the top.
+- Good for data that is nearly sorted
 
 ```js
 /*
@@ -85,6 +86,7 @@ const swap = (arr, idx1, idx2) => {
 ## Selection Sort
 
 - Similar to bubble sort, but instead of first placing large valeus into sorted position, it places small values into sorted position.
+- Does not perform well on data that is nearly sorted.
 
 ```js
 /*
@@ -96,5 +98,36 @@ const swap = (arr, idx1, idx2) => {
 ```
 
 - **Time Complexity**
-    - 
+  - O(N^2)
 
+## Insertion Sort
+
+- Builds up the sort by gradually creating a larger left half which is always sorted.
+- Good for data that is nearly sorted
+
+```js
+/*
+[5,3,4,1,2]
+[3,5,4,1,2]
+[3,4,5,1,2]
+[1,3,4,5,2]
+[1,2,3,4,5]
+*/
+```
+
+- Time Complexity
+
+  - Worst Case: O(N^2)
+    - Worst Case Scenario ([4,3,2,1])
+  - Best Case: O(N), data is nearly sorted
+
+- If data is coming in live and you need to insert it, insertion sort is good because one side is already sorted and can just keep inserting.
+- Insertion sort is good if you need data to be **continuously sorted**.
+
+## Comparing Bubble, Insertion and Selection Sort
+
+|Algorithm|Time Complexity (Best)|Time Complexity (Average)|Time Complexity (Worst)|Space Complexity|
+|:-:|:-:|:-:|:-:|:-:|
+|Bubble Sort|O(N)|O(N^2)|O(N^2)|O(1)|
+|Insertion Sort|O(N)|O(N^2)|O(N^2)|O(1)|
+|Selection Sort|O(N^2)|O(N^2)|O(N^2)|O(1)|
