@@ -79,9 +79,22 @@ const swap = (arr, idx1, idx2) => {
 ```
 
 - **Time Complexity**
-    - Worst Case: O(N^2)
-    - Best Case: If data is nearly sorted, it will be O(N)
+  - Worst Case: O(N^2)
+  - Best Case: If data is nearly sorted, it will be O(N)
 
+## Selection Sort
 
+- Similar to bubble sort, but instead of first placing large valeus into sorted position, it places small values into sorted position.
 
+```js
+/*
+// find the minimum and put in the beginning
+// Compare '5' with the rest first and find if any number if smaller than 5
+[5,3,4,1,2]
+[1,3,4,5,2]
+*/
+```
+
+- **Time Complexity**
+    - 
 
