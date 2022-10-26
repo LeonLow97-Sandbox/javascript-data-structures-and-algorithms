@@ -129,8 +129,91 @@ arr;
 - O(log n) decompositions
 - O(n) comparisons per decomposition
 - Worst Case: O(n^2), when the entire array is sorted. We only take the first item each time.
-    - O(n) decompositions
-    - O(n) comparisons per decomposition
-    - Thus, we could pick the middle/median element instead of the first element every time.
+  - O(n) decompositions
+  - O(n) comparisons per decomposition
+  - Thus, we could pick the middle/median element instead of the first element every time.
 
 ---
+
+## Comparison Sorts
+
+- Average Time Complexity
+- Best Time Complexity is O(n log n)
+
+| Bubble | Insertion | Selection |   Quick    |   Merge    |
+| :----: | :-------: | :-------: | :--------: | :--------: |
+| O(n^2) |  O(n^2)   |  O(n^2)   | O(n log n) | O(n log n) |
+
+## Radix Sort
+
+- Not making direct comparisons between 2 elements
+  - "Is this number greater than the other number?"
+- Radix sort is a special sorting algorithm that works on lists of numbers.
+- It exploits the fact that information about the size of a number is encoded in the number of digits
+  - More digits means a bigger number.
+
+---
+
+### Radix Sort Helpers (`getDigit`)
+
+- To implement radix sort, need to build a few helper functions first:
+  - `getDigit(num, place)`: returns the digit in num at the given place value
+
+```js
+getDigit(12345, 0); // 5
+getDigit(12345, 1); // 4
+```
+
+```js
+function getDigit(num, i) {
+  return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
+}
+
+console.log(getDigit(7323, 2)); // 3
+```
+
+### Radix Sort Helpers (`digitCount`)
+
+- `digitCount(num)`: returns the number of digits in num
+
+```js
+digitCount(1); // 1
+digitCount(25); // 2
+digitCount(314); // 3
+```
+
+```js
+function digitCount(num) {
+  if (num === 0) return 1;
+  return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
+```
+
+### Radix Sort Helpers (`mostDigits`)
+
+- `mostDigits(nums)`: Given an array of numbers, return the number of digits in the largest numbers in the list.
+
+```js
+mostDigits([1234, 56, 7]); // 4
+mostDigits([1, 1, 11111, 1]); // 5
+mostDigits([12, 34, 56, 78]); // 2
+```
+
+```js
+function mostDigits(nums) {
+  let maxDigits = 0;
+  for (let i = 0; i < nums.length; i++) {
+    maxDigits = Math.max(maxDigits, digitCount(nums[i]));
+  }
+  return maxDigits;
+}
+```
+
+### Big O Radix Sort
+
+| Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| :--------------------: | :-----------------------: | :---------------------: | :--------------: |
+|         O(nk)          |           O(nk)           |          O(nk)          |     O(n + k)     |
+
+- `n`: length of array
+- `k`: number of digits
