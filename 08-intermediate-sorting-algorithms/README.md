@@ -15,10 +15,11 @@
 
 ## Merge Sort
 
-- [Merge Sort Slides](https://cs.slides.com/colt_steele/intermediate-sorting-algorithms)
+- [Intermediate Sort Slides](https://cs.slides.com/colt_steele/intermediate-sorting-algorithms)
 - Combination of 2 things - merging and sorting
 - Exploits the fact that arrays of 0 or 1 element are always sorted.
 - Works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array.
+- Solved through recursion
 
 ```js
 /*
@@ -59,12 +60,77 @@ function mergeSort(arr) {
 
 ### Big O of mergeSort
 
-|Time Complexity (Best)|Time Complexity (Average)|Time Complexity (Worst)|Space Complexity|
-|:-:|:-:|:-:|:-:|
-|O(n log n)|O(n log n)|O(n log n)|O(n)|
+| Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| :--------------------: | :-----------------------: | :---------------------: | :--------------: |
+|       O(n log n)       |        O(n log n)         |       O(n log n)        |       O(n)       |
 
 - O(log n) decompositions
-    - making splits until arr.length <= 1
+  - making splits until arr.length <= 1
 - O(n) comparisons per decomposition
-    - comparing 2 arrays, it will be the size of the original array.
+  - comparing 2 arrays, it will be the size of the original array.
 
+---
+
+## Quick Sort
+
+- Like merge sort, exploits the fact that arrays of 0 or 1 element are always sorted.
+- Works by selecting 1 element (called the "pivot") and finding the index where the pivot should end up in the sorted array.
+- Once the pivot is positioned appropriately, quick sort can be applied on either side of the pivot.
+
+```js
+/*
+[5, 2, 1, 8, 4, 7, 6, 3]  // pick the first element '5'
+[3, 2, 1, 4, 5, 7, 6, 8]  // only 5 is sorted now (in the correct position)
+[1, 2, 3, 4, 5, 7, 6, 8]  // 3 is sorted now
+[1, 2, 3, 4, 5, 6, 7, 8]
+*/
+```
+
+---
+
+### Pivot Helper
+
+- In order to implement merge sort, it's useful to first implement a function responsible arranging elements in an array on either side of a pivot.
+- Given an array, this helper function should designate an element as the pivot.
+- It should then rearrange elements in the array so that all values less than the pivot are moved to the left of the pivot, and all values greater than the pivot are moved to the right of the pivot.
+- The order of elements on either side of the pivot doesn't matter.
+- The helper should do this **in place**, i.e., it should not create a new array.
+- When complete, the helper should return the index of the pivot.
+
+### Picking a Pivot
+
+- The runtime of quick sort depends in part on how one selects the pivot.
+- Ideally, the pivot should be chosen so that it's roughly the median value in the data set you're sorting.
+- For simplicity, we will always choose the pivot to be the first element. (there are consequences to this).
+
+```js
+// Pivot Helper Example
+let arr = [5, 2, 1, 8, 4, 7, 6, 3];
+
+pivot(arr); // 4
+
+arr;
+// any one of these is an acceptable mutation:
+// [2, 1, 4, 3, 5, 8, 7, 6]
+// [1, 4, 3, 2, 5, 7, 6, 8]
+// [3, 2, 1, 4, 5, 7, 6, 8]
+// [4, 1, 2, 3, 5, 6, 8, 7]
+// there are other acceptable mutations too.
+```
+
+---
+
+### Big O of quickSort
+
+| Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| :--------------------: | :-----------------------: | :---------------------: | :--------------: |
+|       O(n log n)       |        O(n log n)         |         O(n^2)          |     O(log n)     |
+
+- O(log n) decompositions
+- O(n) comparisons per decomposition
+- Worst Case: O(n^2), when the entire array is sorted. We only take the first item each time.
+    - O(n) decompositions
+    - O(n) comparisons per decomposition
+    - Thus, we could pick the middle/median element instead of the first element every time.
+
+---
