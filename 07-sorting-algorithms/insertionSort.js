@@ -6,16 +6,21 @@
 // Repeat until the array is sorted.
 
 function insertionSort(arr) {
-  let currentVal;
   for (var i = 1; i < arr.length; i++) {
-    currentVal = arr[i];
-    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
-      arr[j + 1] = arr[j]; // [2,1,9,76,76]
+    // 'right'
+    let currentVal = arr[i];
+    let index = i;
+    for (let j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      // 'left'
+      arr[j + 1] = arr[j]; // [2,1,9,76,76] on the last loop with value '4'
+      index = j;
     }
     // insert currentVal into the arr
-    arr[j + 1] = currentVal;
+    // can access it outside that for loop because we use 'var'
+    console.log(index);
+    arr[index] = currentVal;
   }
   return arr;
 }
 
-console.log(insertionSort([2, 1, 9, 76, 4]));
+console.log(insertionSort([1, 2, 9, 76, 4]));

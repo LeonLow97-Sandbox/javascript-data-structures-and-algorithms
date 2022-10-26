@@ -12,9 +12,9 @@
 
 ## What is sorting?
 
-- Sorting is the proccess of rearranging the items in a collection (e.g., an array) so that the items are in some kind of order.
+- Sorting is the process of rearranging the items in a collection (e.g., an array) so that the items are in some kind of order.
 - Examples
-  - Sorting numbers from ssmallest to largest
+  - Sorting numbers from smallest to largest
   - Sorting names alphabetically
   - Sorting movies based on release year
   - Sorting movies based on revenue
@@ -54,8 +54,8 @@
 
 ```js
 /*
-[5,3,4,1,2]
-[3,5,4,1,2]
+[5,3,4,1,2] // compares 5 and 3
+[3,5,4,1,2] // compares 5 and 4
 [3,4,5,1,2]
 [3,4,1,5,2]
 [3,4,1,2,5] // sorted '5'
@@ -85,13 +85,13 @@ const swap = (arr, idx1, idx2) => {
 
 ## Selection Sort
 
-- Similar to bubble sort, but instead of first placing large valeus into sorted position, it places small values into sorted position.
+- Similar to bubble sort, but instead of first placing large values into sorted position, it places small values into sorted position.
 - Does not perform well on data that is nearly sorted.
 
 ```js
 /*
 // find the minimum and put in the beginning
-// Compare '5' with the rest first and find if any number if smaller than 5
+// Compare '5' with the rest first and find if any number if smaller than 5 then swap
 [5,3,4,1,2]
 [1,3,4,5,2]
 */
@@ -107,8 +107,8 @@ const swap = (arr, idx1, idx2) => {
 
 ```js
 /*
-[5,3,4,1,2]
-[3,5,4,1,2]
+[5,3,4,1,2] 
+[3,5,4,1,2] 
 [3,4,5,1,2]
 [1,3,4,5,2]
 [1,2,3,4,5]
@@ -124,10 +124,20 @@ const swap = (arr, idx1, idx2) => {
 - If data is coming in live and you need to insert it, insertion sort is good because one side is already sorted and can just keep inserting.
 - Insertion sort is good if you need data to be **continuously sorted**.
 
+-----
+
+- Take the 'right' value and check if 'left' value is greater than the 'right'.
+  - [2, 1, 3]
+- If greater, make a copy of 'left' value to the index position of 'right' value.
+  - [2, 2, 3]
+- Once iterating to the left is complete, attach the `currentVal` to the position.
+  - [1, 2, 3]
+- <img src="./insertionSort.jpg" alt="illustration of insertion sort drawn by leon low">
+
 ## Comparing Bubble, Insertion and Selection Sort
 
-|Algorithm|Time Complexity (Best)|Time Complexity (Average)|Time Complexity (Worst)|Space Complexity|
-|:-:|:-:|:-:|:-:|:-:|
-|Bubble Sort|O(N)|O(N^2)|O(N^2)|O(1)|
-|Insertion Sort|O(N)|O(N^2)|O(N^2)|O(1)|
-|Selection Sort|O(N^2)|O(N^2)|O(N^2)|O(1)|
+|   Algorithm    | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| :------------: | :--------------------: | :-----------------------: | :---------------------: | :--------------: |
+|  Bubble Sort   |          O(N)          |          O(N^2)           |         O(N^2)          |       O(1)       |
+| Insertion Sort |          O(N)          |          O(N^2)           |         O(N^2)          |       O(1)       |
+| Selection Sort |         O(N^2)         |          O(N^2)           |         O(N^2)          |       O(1)       |

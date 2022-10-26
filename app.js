@@ -1,25 +1,18 @@
-function search(arr, num) {
-  if (num > arr.length) {
-    return -1;
-  }
-
-  let min = 0;
-  let max = arr.length;
-  while (min < max) {
-    middle = (min + max) / 2;
-    let currentNumber = arr[middle];
-
-    if (currentNumber > num) {
-      max = middle - 1;
-    } else if (currentNumber < num) {
-      min = middle + 1;
-    } else {
-      return middle;
-    }
-  }
-  return -1;
+function swap(arr, idx1, idx2) {
+  var temp = arr[idx1];
+  arr[idx1] = arr[idx2];
+  arr[idx2] = temp;
 }
 
-console.log(search([1, 2, 3, 4, 5, 6], 4)); // 3
-console.log(search([1, 2, 3, 4, 5, 6], 6)); // 5
-console.log(search([1, 2, 3, 4, 5, 6], 11)); // -1
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let currentVal = arr[i]
+    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      arr[j+1] = arr[j]
+    }
+    arr[j+1] = currentVal
+  }
+  return arr
+}
+
+console.log(insertionSort([2, 1, 9, 76, 4]));

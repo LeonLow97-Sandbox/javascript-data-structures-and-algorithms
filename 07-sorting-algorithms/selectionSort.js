@@ -13,8 +13,8 @@ function selectionSort(arr) {
         lowest = j; // updated the value of lowest using the index
       }
     }
-    // swap
-    if (i !== lowest) {
+    // swap 
+    if (i !== lowest) { // if i and lowest is the same, we don't swap (reduce iterations)
       var temp = arr[i];
       arr[i] = arr[lowest];
       arr[lowest] = temp;
