@@ -22,12 +22,18 @@
 | Connected via nodes with a **next** pointer |   Insertion and deletion can be expensive   |
 |        Random access is not allowed         | Can quickly be accessed at a specific index |
 
-## Singly Linked List (Push) PseudoCode
+## Singly Linked List (Push) 
 
 - Adding a new node to the end of the linked list.
 
-## Singly Linked List (Pop) PseudoCode
+## Singly Linked List (Pop) 
 
 - Removing a node from the end of the Linked List.
+- Have to assign a new tail when you remove the current tail.
+- new tail: second last node.
+- Have to traverse the linked list
 
+## Singly Linked List (Shift)
 
+- Removing a new node from the beginning of the Linked List
+- Return the old head
