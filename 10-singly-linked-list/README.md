@@ -60,3 +60,9 @@
 ## Singly Linked List (Remove)
 
 - Removing a node from the Linked List at a **specific** position.
+
+## Singly Linked List (Reverse)
+
+- Reversing the Linked List in place.
+- Don't make a copy.
+- Traverse and Reverse
