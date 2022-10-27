@@ -22,11 +22,11 @@
 | Connected via nodes with a **next** pointer |   Insertion and deletion can be expensive   |
 |        Random access is not allowed         | Can quickly be accessed at a specific index |
 
-## Singly Linked List (Push) 
+## Singly Linked List (Push)
 
 - Adding a new node to the end of the linked list.
 
-## Singly Linked List (Pop) 
+## Singly Linked List (Pop)
 
 - Removing a node from the end of the Linked List.
 - Have to assign a new tail when you remove the current tail.
@@ -42,7 +42,7 @@
 
 - Adding a new node to the beginning of the Linked List.
 
-## Singly Linked List (Get) 
+## Singly Linked List (Get)
 
 - Retrieving a node by it's position in the Linked List.
 - Start in the beginning and count how many times we did `.next`
@@ -66,3 +66,26 @@
 - Reversing the Linked List in place.
 - Don't make a copy.
 - Traverse and Reverse
+
+<img style="width:60%;" src="./sll-reverse.jpg" alt="Singly Linked List illustration diagram">
+
+## Big O of Singly Linked List
+
+| Insertion |   Removal    | Searching | Access |
+| :-------: | :----------: | :-------: | :----: |
+|   O(1)    | O(1) or O(n) |   O(n)    |  O(n)  |
+
+- Reversal
+  - O(1) if remove from the beginning
+  - O(N) if remove from the end of middle. Have to traverse through the entire linked list
+- Searching
+  - Traverse through the entire linked list.
+- Access
+  - Traverse through the entire linked list.
+- Accessing an element in ARRAY has a time complexity of O(1), faster than linked list.
+
+## Summary
+
+- Singly Linked Lists are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required.
+- Arrays contain a built in index whereas Linked Lists do not.
+- The idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues.
