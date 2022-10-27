@@ -52,3 +52,7 @@
 
 - Changing/Updating the **value** of a node based on it's position in the Linked List.
 - Accepts **index** and **value**
+
+## Singly Linked List (Insert)
+
+- Adding a node to the Linked List at a **specific** position.
