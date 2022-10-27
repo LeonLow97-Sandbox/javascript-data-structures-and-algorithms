@@ -41,3 +41,9 @@
 ## Singly Linked List (Unshift)
 
 - Adding a new node to the beginning of the Linked List.
+
+## Singly Linked List (Get) 
+
+- Retrieving a node by it's position in the Linked List.
+- Start in the beginning and count how many times we did `.next`
+- Not as efficient as an array
