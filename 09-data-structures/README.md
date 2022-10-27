@@ -19,7 +19,9 @@
 ## Class Methods
 
 - Using `static` keyword to define a static method for a class.
-- Static methods are called without instantiating their class and cannot be called through a class instance. 
+- Static methods are called without instantiating their class and cannot be called through a class instance.
 - Static methods are often used to create utility functions for an application.
 
+## `this` keyword
 
+- Inside all of our instance methods and constructor, this keyword `this` refers to the object created from that class (also known as an **instance**).
