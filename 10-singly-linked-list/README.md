@@ -47,3 +47,8 @@
 - Retrieving a node by it's position in the Linked List.
 - Start in the beginning and count how many times we did `.next`
 - Not as efficient as an array
+
+## Singly Linked List (Set)
+
+- Changing/Updating the **value** of a node based on it's position in the Linked List.
+- Accepts **index** and **value**
