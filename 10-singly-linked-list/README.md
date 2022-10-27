@@ -37,3 +37,7 @@
 
 - Removing a new node from the beginning of the Linked List
 - Return the old head
+
+## Singly Linked List (Unshift)
+
+- Adding a new node to the beginning of the Linked List.
