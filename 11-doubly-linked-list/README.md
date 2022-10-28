@@ -57,3 +57,7 @@ class DoublyLinkedList {
 
 - Adding a node to the beginning of the Doubly Linked List
 
+## Doubly Linked List (get)
+
+- Accessing a node in a Doubly Linked List by its position
+
