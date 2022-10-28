@@ -49,5 +49,7 @@ class DoublyLinkedList {
 
 - Removing a node from the end of the Doubly Linked List
 
+## Doubly Linked List (shift)
 
+- Removing a node from the beginning of the Doubly Linked List
 
