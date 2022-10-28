@@ -45,3 +45,9 @@ class DoublyLinkedList {
 
 - Adding a node to the end of the Doubly Linked List
 
+## Doubly Linked List (pop)
+
+- Removing a node from the end of the Doubly Linked List
+
+
+
