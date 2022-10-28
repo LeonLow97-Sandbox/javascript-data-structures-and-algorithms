@@ -1,11 +1,12 @@
-// insert PseudoCode
-// If the index is less than 0 or greater than or equal to the length, return false
-// If the index is 0, unshift
-// If the index is the same as the length, push
-// Use the get method to access the index -1
-// Set the next and prev properties on the correct nodes to link everything together
-// Increment the length
-// Return true
+// remove PseudoCode
+// If the index is less than 0 or greater than or equal to the length, return undefined
+// If the index is 0, shift
+// If the index is the same as the length - 1, pop
+// Use the get method to retrieve the item to be removed.
+// Update the next and prev properties to remove the found node from the list
+// Set next and prev to null on the found node
+// Decrement the length
+// Return the removed node
 
 class Node {
   constructor(val) {
@@ -141,12 +142,39 @@ class DoublyLinkedList {
     this.length++;
     return true;
   }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) {
+      return undefined;
+    }
+    if (index === 0) {
+      return this.shift();
+    }
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+    let removeNode = this.get(index);
+
+    // removeNode.prev.next = removeNode.next;
+    // removeNode.next.prev = removeNode.prev;
+    let prevNode = removeNode.prev
+    let nextNode = removeNode.next
+    prevNode.next = nextNode
+    nextNode.prev = prevNode
+
+    removeNode.next = null;
+    removeNode.prev = null;
+
+    this.length--;
+    return removeNode;
+  }
 }
 
 let list = new DoublyLinkedList();
 list.push(1001);
 list.push(1002);
 list.push(1003);
+list.push(1004);
 
-console.log(list.insert(0, 635));
+console.log(list.remove(1));
 console.log(list);

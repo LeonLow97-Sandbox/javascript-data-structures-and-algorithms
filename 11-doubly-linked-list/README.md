@@ -69,4 +69,9 @@ class DoublyLinkedList {
 
 - Adding a node in a Doubly Linked List by a certain position.
 
+## Doubly Linked List (remove)
+
+- Removing a node in a Doubly Linked List by a certain position.
+
+
 
