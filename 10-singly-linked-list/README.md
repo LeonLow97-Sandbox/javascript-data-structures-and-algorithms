@@ -71,7 +71,7 @@
 
 ## Big O of Singly Linked List
 
-| Insertion |   Removal    | Searching | Access |
+| Insertion |   Reversal    | Searching | Access |
 | :-------: | :----------: | :-------: | :----: |
 |   O(1)    | O(1) or O(n) |   O(n)    |  O(n)  |
 
