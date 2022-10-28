@@ -65,3 +65,8 @@ class DoublyLinkedList {
 
 - Updating the value of a node based on its position in a Doubly Linked List
 
+## Doubly Linked List (insert)
+
+- Adding a node in a Doubly Linked List by a certain position.
+
+
