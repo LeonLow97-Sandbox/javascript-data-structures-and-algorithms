@@ -61,3 +61,7 @@ class DoublyLinkedList {
 
 - Accessing a node in a Doubly Linked List by its position
 
+## Doubly Linked List (set)
+
+- Updating the value of a node based on its position in a Doubly Linked List
+
