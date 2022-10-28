@@ -89,3 +89,35 @@
 - Singly Linked Lists are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required.
 - Arrays contain a built in index whereas Linked Lists do not.
 - The idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues.
+
+## Practice writing SLL
+
+1. Create a node Class
+2. Create a SLL class
+3. `push` method
+  - add a node the the end of the linked list
+  - return SLL
+4. `pop` method
+  - remove a node from the end of the linked list
+  - return the removed node
+5. `shift` method
+  - remove a node from the beginning of the linked list.
+  - return the removed node
+6. `unshift` method
+  - add a new node to the beginning of the linked list
+    - return SLL
+7. `get` method
+  - retrieving a node by providing it's position in the linked list
+  - return node
+8. `set` method
+  - updating the value of a node based on the index and val
+  - return boolean
+9. `insert` method
+  - adding a node to the specific position of a linked list.
+  - return boolean
+10. `remove` method
+  - remove a node from a list based on provided index.
+  - return removed node
+11. `reverse` method
+  - reversing a linked list
+  - return SLL
