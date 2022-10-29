@@ -34,4 +34,48 @@
 |  Parent  |                      The converse notion of a child.                      |
 | Siblings |                  A group of nodes with the same parent.                   |
 |   Leaf   |                         A node with no children.                          |
+|   Edge   |               The connection between one node and another.                |
 
+## Uses for Trees
+
+- HTML DOM
+- Network Routing
+- Abstract Syntax Trees
+- Artificial Intelligence
+- Folders in Operating System (Folder Structure)
+- Computer File Systems
+- JSON
+
+## Kinds of Trees
+
+- Trees
+- Binary Trees
+  - each node can have at most 2 children (nodes)
+- Binary Search Trees
+  - special case of a binary tree
+  - Every parent node has at most **two** children
+  - sorted in a way that can be compared.
+    - Every node to the left of a parent node is **always less** than the parent
+    - Every node to the right of a parent node is **always greater** than the parent.
+
+<img style="width:40%" src="./binary-search-tree.png" alt="Diagram of a Binary Search Tree">
+
+## BST Tree Classes
+
+```js
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+}
+
+let tree = new BinarySearchTree();
+```
