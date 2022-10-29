@@ -1,0 +1,58 @@
+# Stacks 
+
+- [Stacks Slides](https://cs.slides.com/colt_steele/stacks)
+
+## Objectives
+
+- Define what a stack is
+- Understand use cases for a stack
+- Implement operations on a stack data structure
+
+## What is a stack?
+
+- A LIFO data structure
+- The last element added to the stack will be the first element to be removed from the stack.
+- E.g., _Call Stack_
+
+## Where stacks are used
+
+- Managing function invocations
+- Undo/redo e.g., photo-shopping
+- Routing (the history object - frontend) is treated like a stack
+    - pages viewed
+
+## Implementing a stack
+
+- There is more than 1 way of implementing a stack.
+- _Array_ Implementation
+    - `.push()` and `.pop()`
+        - better option: does not require re-indexing.
+    - `.unshift()` and `.shift()`
+        - might not be good to use this because adding to the beginning of an array is O(N)
+        - have to re-index every element.
+    - using array to implement a stack might not be efficient, use linked list instead
+- _Linked List_ Implementation
+    - `stack.push()` and `stack.pop()`
+
+### `Pushing` PseudoCode
+
+- `push` to the beginning of the linked list.
+- Similar to SLL unshift
+    - Did not use SLL push and pop because pop requires us to traverse through the entire linked list as this is done at the end of the linked list.
+- The function should accept a value.
+- Create a new node with that value
+- If there are no nodes in the stack, set the first and last property to be the newly created node.
+- If there is at least 1 node, create a variable that stores the current first property on the stack.
+- Reset the first property to be the newly created node
+- Set the next property on the node to be the previously created variable.
+- Increment the size of the stack by 1.
+
+### `Pop` PseudoCode
+
+- `pop` remove from the beginning
+- If there are no nodes in the stack, return null.
+- Create a temporary variable to store the first property on the stack.
+- If there is only 1 node, set the first and last property to be null.
+- If there is more than 1 node, set the first property to be the next property on the current first.
+- Decrement the size by 1.
+- Return the value of the node removed.
