@@ -111,3 +111,8 @@ class Queue {
 | Insertion | Removal | Searching | Access |
 | :-------: | :-----: | :-------: | :----: |
 |   O(1)    |  O(1)   |   O(N)    |  O(N)  |
+
+## Summary
+
+- Stacks: add node to beginning and remove node from the beginning of linked list.
+- Queue: add node to the tail and remove node from the head of the linked list.
