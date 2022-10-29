@@ -73,6 +73,10 @@ class DoublyLinkedList {
 
 - Removing a node in a Doubly Linked List by a certain position.
 
+## Doubly Linked List (reverse)
+
+- Reverse a Doubly Linked List
+
 ## Big O of Doubly Linked List
 
 | Insertion | Removal | Searching | Access |
