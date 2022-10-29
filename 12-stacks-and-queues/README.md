@@ -85,10 +85,10 @@
 ## Implementation
 
 - Building a queue with an array
-    - not efficient as it requires re-indexing of every element when we add to the beginning of the array.
+  - not efficient as it requires re-indexing of every element when we add to the beginning of the array.
 - Queue class
-    - `enqueue` and `dequeue`
-    - add node to the tail and remove node from the head of the linked list.
+  - `enqueue` and `dequeue`
+  - add node to the tail and remove node from the head of the linked list.
 
 ```js
 class Node {
@@ -106,4 +106,8 @@ class Queue {
 }
 ```
 
+## Big O of Queues
 
+| Insertion | Removal | Searching | Access |
+| :-------: | :-----: | :-------: | :----: |
+|   O(1)    |  O(1)   |   O(N)    |  O(N)  |
