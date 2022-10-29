@@ -33,6 +33,7 @@
   - using array to implement a stack might not be efficient, use linked list instead
 - _Linked List_ Implementation
   - `stack.push()` and `stack.pop()`
+  - add node to beginning and remove node from the beginning of linked list.
 
 ### `Pushing` PseudoCode
 
@@ -49,7 +50,7 @@
 
 ### `Pop` PseudoCode
 
-- `pop` remove from the beginning
+- `pop` remove from the beginning of linked list
 - If there are no nodes in the stack, return null.
 - Create a temporary variable to store the first property on the stack.
 - If there is only 1 node, set the first and last property to be null.
@@ -62,5 +63,47 @@
 | Insertion | Removal | Searching | Access |
 | :-------: | :-----: | :-------: | :----: |
 |   O(1)    |  O(1)   |   O(N)    |  O(N)  |
+
+# Queues
+
+- [Queues Slides](https://cs.slides.com/colt_steele/queues)
+
+## Objectives
+
+- Define what a queue is
+- Understand use cases for a queue
+- Implement operations on a queue data structure
+
+## What is a Queue?
+
+- FIFO (First in first out) data structure.
+- Examples
+  - Background tasks
+  - Uploading resources
+  - Printing / Task processing
+
+## Implementation
+
+- Building a queue with an array
+    - not efficient as it requires re-indexing of every element when we add to the beginning of the array.
+- Queue class
+    - `enqueue` and `dequeue`
+    - add node to the tail and remove node from the head of the linked list.
+
+```js
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+}
+```
 
 
