@@ -79,3 +79,8 @@ class BinarySearchTree {
 
 let tree = new BinarySearchTree();
 ```
+
+## BST Methods
+
+- `insert`: insert a node in the tree
+- `find`: find a specific node in the tree
