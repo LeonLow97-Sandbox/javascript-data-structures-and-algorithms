@@ -9,6 +9,7 @@
   - InOrder
     - InOrder Traversal is the one the most used variant of DFS(Depth First Search) Traversal of the tree.
     - An InOrder traversal first visits the left child (including its entire subtree), then visits the node, and finally visits the right child (including its entire subtree).
+    - Everything is arranged in order. smallest to largest in the array.
   - PreOrder
     - PreOrder means we visit the node before visiting its children. 
   - PostOrder
@@ -64,3 +65,26 @@
   - If the node has a right property, call the helper function with the right property on the node.
   - Invoke the helper function with the current variable.
 - Return the array of values.
+
+## Which one is better? BFS? DFS?
+
+- If there are lots of nodes, time complexity is the same but space complexity is not.
+    - we have to store a ton of data in the 'queue' in BFS. High space complexity needed to store.
+    - DFS would use less space than BFS in this case.
+- DFS InOrder
+    - Used commonly with BST's
+    - Notice we get all the nodes in the tree in their underlying order.
+- DFS PreOrder
+    - Can be used to "export" a tree structure so that it is easily reconstructed or copied.
+    - Starts off with a root.
+- However, it is easy to switch between the different methods of DFS.
+- The real concern is between BFS and DFS.
+
+## Summary
+
+- Trees are non-linear data structures that contain a root and child nodes.
+- Binary Trees can have values of any type, but at most 2 children for each parent.
+- Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is less than it's value and every node to the right is greater.
+- Can search through Trees using BFS and DFS.
+
+
