@@ -1,0 +1,85 @@
+# Binary Heaps
+
+- [Binary Heaps Slides](https://cs.slides.com/colt_steele/heaps)
+- Another category of **Trees**
+
+## Objectives
+
+- Define what a binary heap is
+- Compare and contrast min and max heaps
+- Implement basic methods on heaps
+- Understand where heaps are used in the real world and what other data structures can be constructed from heaps.
+
+## What is a Binary Heap?
+
+- Very similar to a binary search tree, but with some different rules.
+- Left child is added then the right child.
+- In a **MaxBinaryHeap**, parent nodes are always larger than child nodes.
+- In a **MinBinaryHeap**, parent nodes are always smaller than child nodes.
+
+## Max Binary Heap
+
+- Each parent has at most 2 child nodes.
+- The value of each parent node is always greater than its child nodes.
+- In a Max Binary Heap, the parent is greater than the children, but there are no guarantees between sibling nodes.
+- A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
+- No implied ordering between siblings.
+
+<img style="width:40%" src="./max-binary-heap.png">
+<figcaption>Max Binary Heap</figcaption>
+
+<img style="width:40%" src="./min-binary-heap.png">
+<figcaption>Min Binary Heap</figcaption>
+
+## Why do we need to know this?
+
+- Binary Heaps are used to implement Priority Queues, which are very commonly used data structures.
+- They are also used quite a bit, with **graph traversal** algorithms.
+
+## Storing Heaps
+
+- There's an easy way of storing a binary heap --> list / arrays.
+
+## Relationship between parent and left & right child
+
+- If we have the parent node index,
+    - For _any index of an array n_, the left child is stored at _2n + 1_ and the right child is at _2n + 2_.
+- If we have the child node index,
+    - For _any child node at index n_, its parent is at index _(n - 1) / 2_.
+
+<img src="./relationship.png" style="width:50%">
+
+## Defining our Class
+
+```
+Class Name: MaxBinaryHeap
+Properties: values = []
+```
+
+## Adding to a Max Binary Heap 
+
+- Added node's value is compared to the parent's value.
+- Add to the end (to the left of the tree first)
+- Bubble up (swap until it find its correct spot in the max binary heap tree)
+    - e.g., [41, 39, 33, 18, 27, 12, 55] added 55 with parent 33
+    - compare 55 and 33. since 55 > 33, swap them. [41, 39, 55, 18, 27, 12, 33]
+    - compare 55 with the parent again, i.e., 41, swap again
+    - Finally, [55, 39, 41, 18, 27, 12, 33]
+
+## Insert PseudoCode
+
+- Push the value into the values property on the heap.
+- Bubble the value up to its correct spot.
+    - Bubble Up:
+        - Create a variable called index which is the length of the values property - 1
+        - Create a variable called parentIndex which is the floor of (index - 1) / 2
+        - Keep looping as long as the values element at the parentIndex is less than the values element at the child index.
+            - Swap the value of the values element at the parentIndex with the value of the element property at the child index.
+            - Set the index to be the parentIndex, and start over.
+
+
+
+
+
+
+
