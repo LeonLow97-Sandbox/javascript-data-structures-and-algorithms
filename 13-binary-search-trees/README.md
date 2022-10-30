@@ -84,3 +84,22 @@ let tree = new BinarySearchTree();
 
 - `insert`: insert a node in the tree
 - `find`: find a specific node in the tree
+
+## Big O of BST
+
+| Insertion | Searching |
+| :-------: | :-------: |
+| O(log n)  | O(log n)  |
+
+- As the number of nodes doubles, we only increase 1 extra step.
+- Best Case: O(log n)
+
+<img style="width:50%" src="./bst-logn.png" alt="Diagram illustration of log n in BST">
+
+## Worst Case of BST
+
+- Worst Case Time Complexity: **O(n)**
+
+<img style="width:50%" src="./worst-case.png" alt="BST Worst Case Example">
+
+
