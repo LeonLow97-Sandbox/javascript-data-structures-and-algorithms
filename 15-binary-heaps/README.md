@@ -86,7 +86,7 @@ Properties: values = []
 
 ```js
 /*
-[41, 39, 33, 18, 27, 12] // 41 swap with 12
+[41, 39, 33, 18, 27, 12] // 41 swap with 12 then pop() 41 out and return it.
 [12, 39, 33, 18, 27]  // compare 12 and 39, highest goes in front
 [39, 12, 33, 18, 27] // compare 12 with its children 18 and 27, and swap with the larger children (if both are larger)
 [39, 27, 33, 18, 12] // correct position now
@@ -98,10 +98,36 @@ Properties: values = []
 - Swap the first value in the values property with the last one.
 - Pop from the values property, so you can return the value at the end.
 - Have the new root "sink down" to the correct spot
-    - Your parent index starts at 0 (the root)
-    - Find the index of the left child: 2 * index + 1 (make sure its not out of bounds)
-    - Find the index of the right child: 2 * index + 2 (make sure its not out of bounds)
-    - If the left or right child is greater than the element, swap. If both left and right children are larger, swap with the largest child.
-    - The child index you swapped to now becomes the new parent index.
-    - Keep looping and swapping until neither child is larger than the element.
-    - Return the old root.
+  - Your parent index starts at 0 (the root)
+  - Find the index of the left child: 2 \* index + 1 (make sure its not out of bounds)
+  - Find the index of the right child: 2 \* index + 2 (make sure its not out of bounds)
+  - If the left or right child is greater than the element, swap. If both left and right children are larger, swap with the largest child.
+  - The child index you swapped to now becomes the new parent index.
+  - Keep looping and swapping until neither child is larger than the element.
+  - Return the old root.
+
+## Building a Priority Queue
+
+- A data structure where each element has a priority.
+- Elements with higher priorities are served before elements with lower priorities.
+- Implement a **Min Binary Heap**
+
+## Priority Queue PseudoCode
+
+```
+Class Name:
+    Node
+Properties:
+    val
+    priority  // only using the priority to compare and rearrange the heap
+
+Class Name:
+    PriorityQueue
+Properties:
+    values = []
+```
+
+- Write a Min Binary Heap - lower number means higher priority
+- Each Node has a val and a priority. Use the priority to build the heap.
+- **Enqueue** method accepts a value and priority, makes a new node, and puts it in the right spot based off of its priority.
+- **Dequeue** method removes root element, returns it, and rearranges heap using priority.
