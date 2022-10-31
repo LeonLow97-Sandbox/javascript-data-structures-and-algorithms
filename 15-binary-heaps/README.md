@@ -22,7 +22,7 @@
 - Each parent has at most 2 child nodes.
 - The value of each parent node is always greater than its child nodes.
 - In a Max Binary Heap, the parent is greater than the children, but there are no guarantees between sibling nodes.
-- A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
+- A binary heap is as compact as possible. All the children of **each node are as full as they can be** and **left children are filled out first**.
 - No implied ordering between siblings.
 
 <img style="width:40%" src="./max-binary-heap.png">
@@ -131,3 +131,18 @@ Properties:
 - Each Node has a val and a priority. Use the priority to build the heap.
 - **Enqueue** method accepts a value and priority, makes a new node, and puts it in the right spot based off of its priority.
 - **Dequeue** method removes root element, returns it, and rearranges heap using priority.
+
+## Big O of Binary Heaps
+
+| Insertion | Removal  | Searching |
+| :-------: | :------: | :-------: |
+| O(log N)  | O(log N) |   O(N)    |
+
+- Worst case of Insertion is still O(log N)
+    - because we always insert left and right node to fill up all the nodes at the same level before moving on to the next level.
+
+## Summary
+
+- Binary Heaps are very useful data structures for sorting, and implementing other data structures like priority queues.
+- Binary Heaps are either MaxBinaryHeaps or MinBinaryHeaps with parents either being smaller or larger than their children.
+- With just a little bit of math, can represent heaps using arrays.
