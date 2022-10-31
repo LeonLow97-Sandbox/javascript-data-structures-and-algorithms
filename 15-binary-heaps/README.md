@@ -43,9 +43,9 @@
 ## Relationship between parent and left & right child
 
 - If we have the parent node index,
-    - For _any index of an array n_, the left child is stored at _2n + 1_ and the right child is at _2n + 2_.
+  - For _any index of an array n_, the left child is stored at _2n + 1_ and the right child is at _2n + 2_.
 - If we have the child node index,
-    - For _any child node at index n_, its parent is at index _(n - 1) / 2_.
+  - For _any child node at index n_, its parent is at index _(n - 1) / 2_.
 
 <img src="./relationship.png" style="width:50%">
 
@@ -56,30 +56,52 @@ Class Name: MaxBinaryHeap
 Properties: values = []
 ```
 
-## Adding to a Max Binary Heap 
+## Adding to a Max Binary Heap
 
 - Added node's value is compared to the parent's value.
 - Add to the end (to the left of the tree first)
 - Bubble up (swap until it find its correct spot in the max binary heap tree)
-    - e.g., [41, 39, 33, 18, 27, 12, 55] added 55 with parent 33
-    - compare 55 and 33. since 55 > 33, swap them. [41, 39, 55, 18, 27, 12, 33]
-    - compare 55 with the parent again, i.e., 41, swap again
-    - Finally, [55, 39, 41, 18, 27, 12, 33]
+  - e.g., [41, 39, 33, 18, 27, 12, 55] added 55 with parent 33
+  - compare 55 and 33. since 55 > 33, swap them. [41, 39, 55, 18, 27, 12, 33]
+  - compare 55 with the parent again, i.e., 41, swap again
+  - Finally, [55, 39, 41, 18, 27, 12, 33]
 
 ## Insert PseudoCode
 
 - Push the value into the values property on the heap.
 - Bubble the value up to its correct spot.
-    - Bubble Up:
-        - Create a variable called index which is the length of the values property - 1
-        - Create a variable called parentIndex which is the floor of (index - 1) / 2
-        - Keep looping as long as the values element at the parentIndex is less than the values element at the child index.
-            - Swap the value of the values element at the parentIndex with the value of the element property at the child index.
-            - Set the index to be the parentIndex, and start over.
+  - Bubble Up:
+    - Create a variable called index which is the length of the values property - 1
+    - Create a variable called parentIndex which is the floor of (index - 1) / 2
+    - Keep looping as long as the values element at the parentIndex is less than the values element at the child index.
+      - Swap the value of the values element at the parentIndex with the value of the element property at the child index.
+      - Set the index to be the parentIndex, and start over.
 
+## Removing From a Heap
 
+- Remove the root
+- Replace with the most recently added
+- Adjust (sink down)
+  - The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties.
 
+```js
+/*
+[41, 39, 33, 18, 27, 12] // 41 swap with 12
+[12, 39, 33, 18, 27]  // compare 12 and 39, highest goes in front
+[39, 12, 33, 18, 27] // compare 12 with its children 18 and 27, and swap with the larger children (if both are larger)
+[39, 27, 33, 18, 12] // correct position now
+*/
+```
 
+## Removing (`extractMax`) PseudoCode
 
-
-
+- Swap the first value in the values property with the last one.
+- Pop from the values property, so you can return the value at the end.
+- Have the new root "sink down" to the correct spot
+    - Your parent index starts at 0 (the root)
+    - Find the index of the left child: 2 * index + 1 (make sure its not out of bounds)
+    - Find the index of the right child: 2 * index + 2 (make sure its not out of bounds)
+    - If the left or right child is greater than the element, swap. If both left and right children are larger, swap with the largest child.
+    - The child index you swapped to now becomes the new parent index.
+    - Keep looping and swapping until neither child is larger than the element.
+    - Return the old root.
