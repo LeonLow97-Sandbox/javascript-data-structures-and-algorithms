@@ -1,62 +1,31 @@
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-class BST {
+class MaxBinaryHeap {
   constructor() {
-    this.root = null;
+    this.values = [41, 39, 33, 18, 27, 12];
+  }
+
+  bubbleUp() {
+    let idx = this.values.length - 1
+    const element = this.values[idx]
+    while (idx > 0) {
+      let parentIdx = Math.floor((idx - 1) / 2)
+      let parent = this.values[parentIdx]
+      if (element > parent) {
+        this.values[parentIdx] = element
+        this.values[idx] = parent
+        idx = parentIdx
+      } else if (element <= parent) {
+        break;
+      }
+    }
+    return this.values
   }
 
   insert(val) {
-    let newNode = new Node(val);
-    if (!this.root) {
-      this.root = newNode;
-      return true;
-    } else {
-      let current = this.root;
-      while (true) {
-        if (val === current.val) return false;
-        if (val < current.val) {
-          if (current.left === null) {
-            current.left = newNode;
-            return true;
-          } else {
-            current = current.left;
-          }
-        }
-        if (val > current.val) {
-          if (current.right === null) {
-            current.right = newNode;
-            return true;
-          } else {
-            current = current.right;
-          }
-        }
-      }
-    }
-  }
-
-  find(val) {
-    if (!this.root) return false;
-
-    let current = this.root;
-    while (current) {
-      if (val === current.val) return true;
-      if (val < current.val) current = current.left;
-      if (val > current.val) current = current.right;
-    }
-    return false;
+    this.values.push(val)
+    let result = this.bubbleUp()
+    return result
   }
 }
 
-let bst = new BST();
-console.log(bst.insert(10));
-console.log(bst.insert(5));
-console.log(bst.insert(5));
-console.log(bst.insert(16));
-
-console.log(bst.find(5));
+let mbh = new MaxBinaryHeap()
+console.log(mbh.insert(55))

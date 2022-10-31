@@ -20,7 +20,8 @@ class MaxBinaryHeap {
     let idx = this.values.length - 1;
     const element = this.values[idx];
     while (idx > 0) {
-      let parentIdx = Math.floor((idx - 1) / 2);
+      // need to ensure idx > 0 otherwise the statement below might bring index to negative
+      let parentIdx = Math.floor((idx - 1) / 2); // (n - 1) / 2
       let parent = this.values[parentIdx];
       if (element <= parent) {
         break;
@@ -31,13 +32,13 @@ class MaxBinaryHeap {
         idx = parentIdx; // update the index
       }
     }
-    return this.values
+    return this.values;
   }
 
   insert(element) {
     this.values.push(element);
     let result = this.bubbleUp();
-    return result
+    return result;
   }
 }
 
