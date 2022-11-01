@@ -146,3 +146,16 @@ function hash(key, arrayLen) {
 2. Hashes the key
 3. Retrieves the key-value pair in the hash table.
 4. If the key isn't found, return undefined.
+
+## Keys / Values
+
+-----
+
+### keys
+
+1. Loop through the hash table array and return an array of keys in the table.
+1. Check for duplicate data
+
+### values
+
+1. Loop through the hash table array and return an array of values in the table.

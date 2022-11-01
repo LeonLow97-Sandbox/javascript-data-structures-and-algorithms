@@ -24,6 +24,7 @@ class HashTable {
       }
       return total;
     }
+
     set(key,value){
       let index = this._hash(key);
       if(!this.keyMap[index]){
@@ -31,6 +32,7 @@ class HashTable {
       }
       this.keyMap[index].push([key, value]);
     }
+
     get(key) {
         let index = this._hash(key)
         if (this.keyMap[index]) {
@@ -42,6 +44,24 @@ class HashTable {
         }
         return undefined
     }
+
+    values() {
+        let valuesArr = []
+        for (let i = 0; i < this.keyMap.length; i++) {
+            if (this.keyMap[i]) {
+                for (let j = 0; j < this.keyMap[i].length; j++) {
+                    if (!valuesArr.includes(this.keyMap[i][j][1])) {
+                        valuesArr.push(this.keyMap[i][j][1])
+                    }
+                }
+            }
+        }
+        return valuesArr
+    }
+
+    keys() {
+
+    }
   }
 
 let ht =  new HashTable(17)
@@ -52,9 +72,11 @@ ht.set("salmon","#FA8072")
 ht.set("lightcoral","#F08080")
 ht.set("mediumvioletred","#C71585")
 ht.set("plum","#DDA0DD")
+ht.set("plum","#DDA0DD")
 console.log(ht)
 
 console.log(ht.get("yellow"))
 console.log(ht.get("maroon"))
 console.log(ht.get("salmon"))
 console.log(ht.get("blue"))
+console.log(ht.values())
