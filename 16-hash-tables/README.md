@@ -129,3 +129,20 @@ function hash(key, arrayLen) {
 - Unlike with separate chaining, this allows us to store a single key-value at each index.
 
 <img style="width:40%" src="./linear-probing.png" alt="Separate Chaining Diagram">
+
+## Set / Get Methods
+
+-----
+
+### Set
+
+1. Accepts a key and a value
+2. Hashes the key
+3. Stores the key-value pair in the hash table array via **separate chaining**.
+
+### Get
+
+1. Accepts a key
+2. Hashes the key
+3. Retrieves the key-value pair in the hash table.
+4. If the key isn't found, return undefined.
