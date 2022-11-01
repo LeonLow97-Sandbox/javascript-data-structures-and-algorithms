@@ -159,3 +159,16 @@ function hash(key, arrayLen) {
 ### values
 
 1. Loop through the hash table array and return an array of values in the table.
+
+## Big O of Hash Tables
+
+### Average Case
+
+|Insert|Deletion|Access|
+|:-:|:-:|:-:|
+|O(1)|O(1)|O(1)|
+
+### Worst Case
+
+- O(n)
+  - all key-values belong in the same hash

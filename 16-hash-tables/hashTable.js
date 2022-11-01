@@ -96,3 +96,7 @@ console.log(ht.values())
 console.log("*********************")
 
 console.log(ht.keys())
+
+ht.keys().forEach(function(key) {
+  console.log(key)
+})
