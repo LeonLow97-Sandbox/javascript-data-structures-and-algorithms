@@ -109,6 +109,13 @@ g.addVertex("Tokyo")
 - The function should reassign the key of vertex2 to be an array that does not contain vertex1.
 - Don't worry about handling errors/invalid vertices.
 
+## Removing a Vertex
+
+- The function should accept a vertex to remove
+- The function should loop as long as there are any other vertices in the adjacency list for that vertex.
+- Inside of the loop, call `removeEdge` function with the vertex we are removing and any values in the adjacency list for that vertex.
+- Delete the key in the adjacency list for that vertex.
+
 
 
 
