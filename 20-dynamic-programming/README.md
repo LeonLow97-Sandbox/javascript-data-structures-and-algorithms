@@ -68,11 +68,30 @@ function fib(n, memo = []) {
 }
 ```
 
-## Big O of Memoization 
+## Big O of Memoization
 
 - To access a value in an array, it is O(1) time complexity.
 - With memoization, we look up the value in the memo.
-    - **Time Complexity: O(N)**
-    - Previously, with recursion only, time complexity was O(2^N).
+  - **Time Complexity: O(N)**
+  - Previously, with recursion only, time complexity was O(2^N).
 
+## Bottom Up Approach
 
+- Previously, we were working with a Top-Down Approach.
+- There is another way of doing it, i.e., Bottom Up Approach
+  - work with fib(1) first
+
+## Tabulation (Bottom Up Approach)
+
+- Storing the result of a previous result in a "table" (usually an array).
+- Usually done using **iteration**.
+- Better **space complexity** can be achieved using tabulation.
+
+```js
+
+```
+
+## Big O of Tabulation
+
+- Time Complexity: O(N)
+- Space Complexity is better than Memorization.
