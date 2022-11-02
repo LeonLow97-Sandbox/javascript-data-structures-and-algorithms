@@ -38,3 +38,28 @@
 <img style="width:50%;display:block" src="./optimal-substructure.png">
 - Without Optimal Substructure
 <img style="width:50%;display:block" src="./no-optimal-substructure.png">
+
+## Recursive Fibonacci Sequence and it's Big O
+
+```js
+function fibonacci(n) {
+    if (n <= 2) {
+        return 1
+    }
+    return fibonacci(n - 1) + fibonacci(n-2)
+}
+```
+
+- Time Complexity (2^N)
+    - Exponential (BAD)
+    - Worse than O(N^2)
+
+## Memoization
+
+- Storing the results of expensive function calls (e.g., fib(5)) and returning the **cached result** when the same inputs occur again.
+
+```js
+// Recursive + Memorization
+
+```
+
