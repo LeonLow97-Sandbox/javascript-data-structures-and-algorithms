@@ -153,6 +153,20 @@ class singlyLinkedList {
     return this;
   }
 
+  rotate(places) {
+    if (places >= 0) places = Math.abs(places) % this.length;
+    else places = this.length + (places % this.length);
+
+    if (!this.head) return undefined;
+    for (let i = 0; i < places; i++) {
+      this.tail.next = this.head;
+      this.head = this.head.next;
+      this.tail = this.tail.next;
+    }
+    this.tail.next = null;
+    return this;
+  }
+
   print() {
     let arr = [];
     let current = this.head;
@@ -172,3 +186,5 @@ list.push(400);
 list.push(999);
 
 console.log("[SLL]", list.print());
+
+console.log(list.rotate(3).print())
