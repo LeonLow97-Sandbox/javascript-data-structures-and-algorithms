@@ -1,3 +1,5 @@
+// With O(N log N) priority queue
+
 class PriorityQueue {
   constructor() {
     this.values = [];
@@ -35,7 +37,7 @@ class WeightedGraph {
     const nodes = new PriorityQueue();
     const distances = {};
     const previous = {};
-    let path = [] // to return at the end
+    let path = []; // to return at the end
     let smallest;
 
     // build up initial state
@@ -56,9 +58,9 @@ class WeightedGraph {
       if (smallest === finish) {
         // we are done, build up to return at end
         // initially, smallest will be the "finish" node
-        while(previous[smallest]) {
-            path.push(smallest)
-            smallest = previous[smallest]
+        while (previous[smallest]) {
+          path.push(smallest);
+          smallest = previous[smallest];
         }
         break;
       }
@@ -81,7 +83,7 @@ class WeightedGraph {
         }
       }
     }
-    return path.concat(smallest).reverse()
+    return path.concat(smallest).reverse();
   }
 }
 
