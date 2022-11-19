@@ -117,17 +117,19 @@ class SinglyLinkedList {
   //   passed in. For instance, if your list looks like 1 -> 2 -> 3 -> 4 -> 5
   //   and you rotate by 2, the list should be modified to 3 -> 4 -> 5 -> 1 -> 2.
   //   The number passed in to rotate can be any integer.
-  rotate(places) {
-    if (places >= 0) places = Math.abs(places) % this.length;
-    else places = this.length + (places % this.length);
+  rotate(num) {
+    let move;
+    if (num === 0) return this;
+    if (num > 0) move = num % this.length;
+    else if (num < 0) move = this.length + (num % this.length)
 
-    if (!this.head) return undefined;
-    for (let i = 0; i < places; i++) {
-      this.tail.next = this.head;
-      this.head = this.head.next;
-      this.tail = this.tail.next;
+    for (let i = 0; i < move; i++) {
+        this.tail.next = this.head
+        this.head = this.head.next
+        this.tail = this.tail.next
     }
-    this.tail.next = null;
+
+    this.tail.next = null
     return this;
   }
 
