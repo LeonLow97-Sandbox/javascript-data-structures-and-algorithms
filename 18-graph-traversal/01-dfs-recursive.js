@@ -23,11 +23,14 @@ class Graph {
     const visited = {};
     const adjacencyList = this.adjacencyList;
 
+    console.log(adjacencyList)
+
     function DFS(vertex) {
       if (!vertex) return null;
       visited[vertex] = true;
       result.push(vertex);
       adjacencyList[vertex].forEach((neighbor) => {
+        console.log(neighbor)
         if (!visited[neighbor]) {
           return DFS(neighbor);
         }
