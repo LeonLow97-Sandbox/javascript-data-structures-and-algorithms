@@ -27,11 +27,11 @@ function searchRefactor(arr, num) {
 
     while (min <= max) {
         let middle = Math.floor((min + max)/2)
-        let currentNumber = arr[middle]
+        let middleNumber = arr[middle]
 
-        if (currentNumber < num) {
+        if (middleNumber < num) {
             min = middle + 1
-        } else if (currentNumber > num) {
+        } else if (middleNumber > num) {
             max = middle + 1
         } else {
             return middle

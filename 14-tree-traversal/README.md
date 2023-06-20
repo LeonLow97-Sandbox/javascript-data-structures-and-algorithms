@@ -14,6 +14,11 @@
     - PreOrder means we visit the node before visiting its children. 
   - PostOrder
     - PostOrder order means we visit the node only after visiting its children.
+- Nodes on the left are smaller than nodes on the right.
+- Summary
+  - Inorder => Left, Root, Right
+  - Preorder => Root, Left, Right
+  - Postorder => Left, Right, Root
 
 ---
 

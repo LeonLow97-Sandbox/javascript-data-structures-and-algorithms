@@ -171,7 +171,7 @@ class singlyLinkedList {
       arr.push(current.val);
       current = current.next;
     }
-    return arr
+    return arr;
   }
 }
 
@@ -182,7 +182,7 @@ list.push(250);
 list.push(400);
 list.push(999);
 
-console.log("[SLL]", list.print())
+console.log("[SLL]", list.print());
 
-list.reverse()
-console.log("[SLL reverse]", list.print())
+list.reverse();
+console.log("[SLL reverse]", list.print());

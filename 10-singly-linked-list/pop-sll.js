@@ -73,3 +73,5 @@ console.log("[SLL]:", list);
 // console.log("[SLL]:", list);
 // console.log("[SLL pop()]:", list.pop());
 // console.log("[SLL]:", list);
+
+

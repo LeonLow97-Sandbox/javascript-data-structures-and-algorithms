@@ -52,16 +52,16 @@ class BinarySearchTree {
   }
 
   DFS_PreOrder() {
-    let data = []
-    let current = this.root
+    let data = [];
+    let current = this.root;
 
     function traverse(node) {
-      data.push(node.val)
-      if (node.left) traverse(node.left)
-      if (node.right) traverse(node.right)
+      data.push(node.val);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
     }
-    traverse(current)
-    return data
+    traverse(current);
+    return data;
   }
 }
 
@@ -74,10 +74,10 @@ tree.insert(2);
 tree.insert(16);
 tree.insert(7);
 
-console.log(tree.DFS_PreOrder());  // [10, 5, 2, 7, 13, 11, 16]
+console.log(tree.DFS_PreOrder()); // [10, 5, 2, 7, 13, 11, 16]
 
 /*
             10
         5       13
       2   7   11   16
-    */
+*/

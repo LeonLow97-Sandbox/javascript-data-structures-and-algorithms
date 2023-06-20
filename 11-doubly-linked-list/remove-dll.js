@@ -138,7 +138,7 @@ class DoublyLinkedList {
     prevNode.next = newNode;
     newNode.prev = prevNode;
     newNode.next = nextNode;
-    nextNode.prevNode = newNode;
+    nextNode.prev = newNode;
     this.length++;
     return true;
   }
